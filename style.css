@@ -1,0 +1,33 @@
+
+
+*{
+    font-family: Cormorant SC;
+    --nav-height: 80px;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+}
+.nav-links{
+    width: 721px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(21, 52, 59, 1);
+    margin: 10px;
+    letter-spacing: 8.2px;
+    padding: 40 502 31 57;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(231, 208, 186, 1);
+    font-weight: 900;
+    font-size: 24px;
+    height: var(--nav-height);
+}
