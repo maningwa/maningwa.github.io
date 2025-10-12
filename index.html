@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Maningwa's Portfolio</title>
+    <title>Famih Maningwa</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>
-    <header>
-        <div class="nav-links">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Contacts">Contacts</a>
+<body style="backdrop-filter:blur(50px) ;">
+    <img src="Quant Desktop.png" alt="" style="position: absolute; width: 100%; height: 100%; z-index:-99999; object-fit:cover; filter: blur(10px);">
+    
+    <header class="row bg-glass">
+        <article class="center">
+            <h1 class="p" style="font-weight: 500;color: #eee;">Famih Maningwa</h1>
+            <h1 class="p"> FA | FACCA | CPA</h1>
+        </article>
+        <nav class="center row" id="nav-link">
+            <a href="#">Portfolio</a>
+            <a href="#">CV</a>
+        </nav>
+        <div class="btn-group center">
+            <button class="btn-secondary caption" onclick="switchTheme()">Contact me</button>
         </div>
+        
     </header>
-    <main>
-        <section id="Home">
-            <div class="summary-card">
-                <h1>
-                    <span class="first">Famih</span>
-                    <span class="sec">Maningwa</span>
-                    <hr style="height: 3px; border: unset; background: rgba(231, 208,186, 1)">
-                </h1>
-                <h3>
-                    I am your Average Low-level Dev Enhoyer,<br>Fine Art Horbbyist <br>Finance Major and Tech Lover
-                </h3>
-                <div class="btn-group">
-                    <button>
-                        Download CV
-                    </button>
-                    <button>
-                        Contact Me
-                    </button>
-                </div>
+    <section class="container" style="display:grid; align-items: center;">
+        <article class="center">
+            <h1>Focus on your Core business. Let me optimise your support services.....</h1>
+            <div class="center">
+                <button href="#" class="btn btn-primary text-l">Reach Out</button>
+                <button href="#"class="btn btn-secondary text-l">Solutions</button>
             </div>
-            <img src="Smiling man.png" alt="Smiling" srcset="" height="90%">
-        </section>
-        <section id="About">About section</section>
-        <section id="Contacts">Contacts section</section>
-    </main>
+            
+        </article>
+        
+    </section>
+    <section class="cotainer p bg-light" style="padding:1rem 2rem; min-height:min-content; width: 100dvw; list-style: upper-roman; gap: 1em;">
+        <li>General Accounting and Finance</li>
+        <li>Tax Advisory and consulting</li>
+        <li>Payroll Processing and Administration</li>
+        <li>Business Process Optimization</li>
+        <li>Administration</li>
+    </section>
+    <footer class="row">
+        Famih Maningwa&copy 2025;
+    </footer>
+
+    <script>
+        function switchTheme(){
+            document.body.classList.toggle("light")
+        }
+    </script>
 </body>
 </html>
