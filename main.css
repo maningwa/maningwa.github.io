@@ -1,98 +1,138 @@
-*{box-sizing: border-box;margin:0;padding: 0;}
 :root{
-    --primary-hue : 250;
-    --accent-hue  : calc( var(--primary-hue) + 10);
-    --bg-dark   : hsl(var(--primary-hue),30%,5%);
-    --bg-neutral: hsl(var(--primary-hue),30%,10%);
-    --bg-light  : hsl(var(--primary-hue),30%,15%);
-    --text      : hsl(var(--primary-hue),30%,95%);
-    --text-muted: hsl(var(--accent-hue), 30%,85%);
-    --primary   : hsl(var(--primary-hue),70%,50%);
-    --accent    : hsl(var(--accent-hue), 50%,85%);
+    font:100 1em system-ui;
+    /* base Colors */
+    --primary-hue   : 200;
+    --accent-hue    : calc(var(--primary-hue) + 100);
+    --accent        : hsl(var(--accent-hue),50%,30%);
+    --primary        : hsl(var(--primary-hue),50%,20%);
 
-    --shadow    :   inset 0 1px 4px #fff9,
-                    0 1px 4px #111f,
-                    0 4px 8px #0007;
-    --error     : hsl(50,90%,30%);
-    --danger    : hsl(0,90%,30%);
-    --success   : hsl(90,90%,30%);
+    --bg-light       : hsl(var(--primary-hue),25%,95%);
+    --bg-mid        : hsl(var(--primary-hue),25%,90%);
+    --bg-dark      : hsl(var(--primary-hue),25%,85%);
+    /* text Colors */
+    --text-dark     : hsl(var(--primary-hue) ,0%,15%);
+    --text-muted    : hsl(var(--primary-hue) ,0%,25%);
+    /* borders and shadows */
+    --border        : var(--bg-light);
 
-    --gradient  :linear-gradient(180deg, var(--primary),var(--bg-neutral)100%);
-    --h1        : 100 clamp(38px,11dvw,72px)/1 system-ui,sans-Serif;
-    --h2        : 100 clamp(32px,10dvw,36px)/1 system-ui,sans-Serif;
-    --h3        : 100 clamp(26px,9dvw,30px)/1 system-ui,sans-Serif;
-    --caption   : 100 clamp(18px, 5dvw,24px)/1 system-ui,sans-Serif;
-    --p         : 100 clamp(14px, 4dvw,16px)/1 system-ui,sans-Serif;
+    --relief-btn    : inset 0px 2px 2px #ffff,
+                      0px 4px 4px #0003,
+                      0px 8px 8px #0001;
+    --relief        : inset 0px 2px 2px #ffff,
+                      0px 2px 4px #0003,
+                      0px 4px 8px #0001;
+
+    --relief-sunken : 1px 2px 4px #fffa,
+                      inset 0px 2px 4px #0007,
+                      inset 0px 4px 8px #0003;
+
+    color: var(--text-muted);
+} 
+
+
+button, .btn{
+    background: unset;
+    border: unset;
+    padding: 1em;
+    margin: 0.25em;
+    border-radius:0.25em;
+    box-shadow: var(--relief-btn);
 }
-.bg-glass{background: #f7f7f711; backdrop-filter: blur(30px);}
 
-.h1,h1  {font: var(--h1)}
-.h2,h2  {font: var(--h2)}
-.h3,h3  {font: var(--h3)}
-.caption,a{transition: all 250ms;font: var(--caption);text-decoration: none; color: var(--text-muted)}
-.p{font: var(--p);}
-.text-muted{color: var(--text-muted);}
-.text{color: var(--text);}
-.text-l{font-size: 1.5rem;}
-.text-m{font-size: 1rem;}
-.text-s{font-size: 0.5rem;}
-
-.bg-neutral{ background: var(--bg-neutral);}
-.bg-light{ background: var(--bg-light);}
-.center{text-align: center;}
-.right{text-align: right;}
-.left{text-align: left;}
-.justify{text-align:justify;width: 100%;}
-
-.container, section, footer{width: 80%;margin: auto;}
-.container-fluid{ width: 100%;}
+*{margin:0; padding: 0; box-sizing: border-box; font:var(--h1);}
 
 body{
     background: var(--bg-dark);
     color: var(--text-muted);
-    font: var(--p);
-    min-height: 100dvh;
+    height: 98dvh;
+}
+header,section,footer{
+    background: var(--bg-mid);
+    margin:1rem auto;
+    width: clamp(300px,90%,50em);
+    padding: 0.5em;
+    border-radius: 0.25rem;
 }
 
-:is(button, .btn-primary,.btn), a:hover{
-    margin: 10px;
-    border: unset;
-    padding: 0.5rem;
-    color: var(--text);
-    background: var(--gradient);
-    box-shadow: var(--shadow);
-    /* border-radius: 0.5rem;; */
-    transition: all 250ms;
+nav{
+    background: var(--bg-light);
+    border-radius: 0.25em;
+    box-shadow: var(--relief);
+    margin: auto auto 1em auto ;
 }
-.btn-secondary{background: unset;; color: var(--accent);}
-.btn-secondary-success{border: 1px solid var(--success);color: var(--success);background: unset;}
-.btn-secondary-danger{border: 1px solid var(--danger);color: var(--danger);background: unset;}
-.btn-secondary-error{border: 1px solid var(--error);color: var(--error);background: unset;}
-.btn-success{color: var(--text);background: var(--success);}
-.btn-danger{color: var(--text);background: var(--danger);}
-.btn-error{color: var(--text);background: var(--error);}
 
-.rounded{border-radius:5rem; overflow: hidden;}
-
-.row{
+nav ul{
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
     align-items: center;
-    justify-content: space-around;
+    gap: 1em;
+}
+nav li:first-child{
+    margin-right: auto;
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 1em;
+}
+nav li:last-child{
+    margin: 0.5em 0.5em 0.5em auto;
+    border-radius: 0.25em;
+    box-shadow: var(--relief-btn);
+    padding: 0.5em 1em;
+}
+header img{
+    border-radius: 0.25em;
+    object-fit: cover;
+    object-position:center;
+    width:100%;
+    max-height:1200px;
+}
+nav a{ 
+    color: var(--text-muted);
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+    flex-wrap: wrap;
+    gap:1em;
+}
+.row>*,.col{
+    flex: 1 0 15em;
 }
 
-.row>*{ flex: 1 1 auto; text-align: center;}
-.col { flex: 1 1 250px}
-.col2{ flex: 2 1 250px;}
-.col3{ flex: 3 1 250px;}
-.col4{ flex: 4 1 250px;}
-.col5{ flex: 5 1 250px;}
-.col6{ flex: 6 1 250px;}
+#CTA a{
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--text-dark);
+}
+.btn-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-@media screen and (max-width :700px) {
-    #nav-link{
-        display: none;
-        outline: 1px solid rgba(255, 0, 0, 0.39);
-        transition: all 150ms;
-    }
+.btn-group *{
+    flex: 0 1 7em;
+    align-self: stretch;
+}
+a{transition: all 150ms}
+
+a:hover, a:hover{text-decoration: underline;}
+
+@media (max-width:57px){
+    header img{ height: 20px; aspect-ratio: 3/4;}
+}
+
+@media ( max-width:620px){
+    nav ul li{display: none;}
+    nav ul li:first-child,nav ul li:last-child{display: inline-block;}
 }
