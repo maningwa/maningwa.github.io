@@ -1,0 +1,8 @@
+# Update the placeholder text and icon with your own branding.
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0054de" />
+  <path
+    d="M11 10.5h10v2.6h-7.2v3.2h6.2v2.6h-6.2v4.6H11z"
+    fill="#ffffff"
+  />
+</svg>
