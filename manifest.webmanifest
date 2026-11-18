@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "CRM",
-  "short_name": "CRM",
-  "description": "Lead and contact management CRM",
+  "name": "Anthrovisor",
+  "short_name": "Anthrovisor",
+  "description": "Anthrovisor — lead and contact management CRM",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
