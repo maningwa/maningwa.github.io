@@ -1,7 +1,7 @@
-const BUILD_ID = "05cac4e09ba6"
+const BUILD_ID = "69a4fdf908ae"
 const CACHE_NAME = `crm-pwa-${BUILD_ID}`
 const APP_SCOPE = new URL('./', self.registration.scope)
-const PRECACHE_URLS = ["","apple-touch-icon.png","favicon.svg","icon-192.png","icon-512.png","icon-maskable-512.png","icons.svg","manifest.webmanifest","assets/eb-garamond-latin-CRpggXlh.woff2","assets/es-D4THWdz3.js","assets/index-DZcyQ5pX.js","assets/index-KujyFuCj.css","assets/index.es-BjxrqXAX.js","assets/jspdf.es.min-9uE6fvxo.js","assets/purify.es-Bvo9QlJ8.js"].map((path) => new URL(path, APP_SCOPE).href)
+const PRECACHE_URLS = ["","apple-touch-icon.png","favicon.svg","icon-192.png","icon-512.png","icon-maskable-512.png","icons.svg","manifest.webmanifest","assets/eb-garamond-latin-CRpggXlh.woff2","assets/es-D4THWdz3.js","assets/index-D7xUwj4K.css","assets/index-TTJSOI1B.js","assets/index.es-DUXKxZAC.js","assets/jspdf.es.min-BsyNeE-A.js","assets/purify.es-Bvo9QlJ8.js","assets/report.worker-CfkjNNw8.js"].map((path) => new URL(path, APP_SCOPE).href)
 const PRECACHE_SET = new Set(PRECACHE_URLS)
 const ASSET_PATH = new URL('assets/', APP_SCOPE).pathname
 
